@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EsqueciSenha"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+   <TextView
+       android:id="@+id/redefinirsenha"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Redefinir Senha"
+       android:textSize="70sp"
+       android:textColor="@color/white"
+       android:fontFamily="@font/merriweather"
+       android:layout_gravity="center"
+       android:layout_marginTop="80dp" />
+
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:textColor="@color/white"
+       android:textSize="30sp"
+       android:layout_marginTop="5dp"
+       android:layout_gravity="center"
+       android:text="Informe email ou nome de usuario e CPF\n cadastrados para redefinir sua senha"
+       />
+
+    <EditText
+        android:id="@+id/Email"
+        style="@style/editTextredefinir"
+        android:layout_marginHorizontal="350dp"
+        android:layout_marginTop="70dp"
+        android:hint="Email ou nome de usuário"
+        android:textSize="30dp"/>
+
+    <EditText
+        android:id="@+id/CPF"
+        style="@style/editTextredefinir"
+        android:layout_marginHorizontal="350dp"
+        android:layout_marginTop="40dp"
+        android:hint="CPF"
+        android:textSize="30dp"/>
+
+    <EditText
+        android:id="@+id/novasenha"
+        style="@style/editTextredefinir"
+        android:layout_marginHorizontal="350dp"
+        android:layout_marginTop="40dp"
+        android:hint="Nova senha"
+        android:textSize="30sp"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center"
+        >
+
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/botao"
+        android:background="@drawable/botaobranco"
+        android:text="Voltar"
+        android:textSize="25sp"
+        android:layout_marginStart="350dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/botao"
+        android:background="@drawable/botaobranco"
+        android:text="Redefinir"
+        android:textSize="25sp"
+        android:layout_marginStart="289dp"
+        />
+
+    </LinearLayout>
+
+</LinearLayout>
