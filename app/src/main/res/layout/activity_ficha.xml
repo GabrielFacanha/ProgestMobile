@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".ActivityFichaActivity">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:scaleType="fitXY"
+                android:layout_marginTop="50dp"
+                app:srcCompat="@drawable/ministeriodaeducacao__3_" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MINISTÉRIO DA EDUCAÇÃO\n SECRETARIA DE EDUCAÇÃO MÉDIA E TECNOLÓGICA\n
+            INSTITUTO FEDERAL DE EDUCAÇÃO, CIÊNCIA E TECNOLOGIA\n DIRETORIA DE ENSINO - DIREN\n
+            DEPARTAMENTO ACADÊMICO DE INFORMAÇÃO E COMUNICAÇÃO"
+
+                android:textAlignment="center"
+                android:textSize="25sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:layout_gravity="end"
+                android:layout_marginEnd="50dp"
+                android:src="@drawable/ifam__2_" />
+        </androidx.appcompat.widget.Toolbar>
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/black"/>
+
+    <TextView
+        android:id="@+id/FichaInformativa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FICHA INFORMATIVA"
+        android:textSize="35sp"
+       android:layout_gravity="center"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tecnivelmedio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CURSO TÉCNICO DE NÍVEL MÉDIO INTEGRADO EM INFORMÁTICA"
+        android:textSize="28sp"
+        android:layout_gravity="center"
+        android:textStyle="bold"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/retangulobordas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="200dp"
+            android:layout_marginTop="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/bordasretangulo"/>
+
+        <TextView
+            android:id="@+id/dadospessoais"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I. DADOS PESSOAIS"
+            android:textSize="27sp"
+            android:layout_marginTop="5dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="@id/retangulobordas"
+            app:layout_constraintStart_toStartOf="@id/retangulobordas"
+            android:layout_marginStart="10dp" />
+
+        <TextView
+            android:id="@+id/nometext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nome:"
+            android:textSize="30sp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="@id/retangulobordas"
+            app:layout_constraintTop_toBottomOf="@id/dadospessoais"
+            android:layout_marginStart="10dp"
+            />
+
+        <EditText
+            android:id="@+id/nomeedit"
+            android:layout_width="450dp"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@id/dadospessoais"
+            app:layout_constraintStart_toEndOf="@id/nometext"/>
+
+         <TextView
+            android:id="@+id/datanasctext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Data de nascimento:"
+            android:textSize="30sp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="@id/retangulobordas"
+            app:layout_constraintTop_toBottomOf="@id/nometext"
+            android:layout_marginStart="10dp"
+            />
+
+        <EditText
+            android:id="@+id/datanascedit"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+          android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@id/nometext"
+            app:layout_constraintStart_toEndOf="@id/datanasctext"/>
+
+
+        <TextView
+            android:id="@+id/celulartext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Celular:"
+            android:textSize="30sp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toEndOf="@id/datanascedit"
+            app:layout_constraintTop_toBottomOf="@id/nometext"
+            android:layout_marginStart="30dp"
+            />
+
+        <EditText
+            android:id="@+id/celularedit"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@id/nometext"
+            app:layout_constraintStart_toEndOf="@id/celulartext"/>
+
+        <TextView
+            android:id="@+id/rgtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RG:"
+            android:textSize="30sp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="@id/retangulobordas"
+            app:layout_constraintTop_toBottomOf="@id/datanasctext"
+            android:layout_marginStart="10dp"
+            />
+
+        <EditText
+            android:id="@+id/rgedit"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@id/datanasctext"
+            app:layout_constraintStart_toEndOf="@id/rgtext"/>
+
+        <TextView
+            android:id="@+id/enderecotext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Endereço:"
+            android:textSize="30sp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="@id/retangulobordas"
+            app:layout_constraintTop_toBottomOf="@id/rgtext"
+            android:layout_marginStart="10dp"
+            />
+
+        <EditText
+            android:id="@+id/enderecoedit"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@id/rgtext"
+            app:layout_constraintStart_toEndOf="@id/enderecotext"/>
+
+        <TextView
+            android:id="@+id/bairrotext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bairro:"
+            android:textSize="30sp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toEndOf="@id/enderecoedit"
+            app:layout_constraintTop_toBottomOf="@id/rgtext"
+            android:layout_marginStart="30dp"
+            />
+
+        <EditText
+            android:id="@+id/bairroedit"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+           android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@id/rgtext"
+            app:layout_constraintStart_toEndOf="@id/bairrotext"/>
+
+        <TextView
+            android:id="@+id/nomepaitext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nome do pai:"
+            android:textSize="30sp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="@id/retangulobordas"
+            app:layout_constraintTop_toBottomOf="@id/enderecotext"
+            android:layout_marginStart="10dp"
+            />
+
+        <EditText
+            android:id="@+id/nomepaiedit"
+            android:layout_width="450dp"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@id/enderecotext"
+            app:layout_constraintStart_toEndOf="@id/nomepaitext"/>
+
+        <TextView
+            android:id="@+id/emailpaitext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email do pai:"
+            android:textSize="30sp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="@id/retangulobordas"
+            app:layout_constraintTop_toBottomOf="@id/nomepaitext"
+            android:layout_marginStart="10dp"
+            />
+
+        <EditText
+            android:id="@+id/emailpaiedit"
+            android:layout_width="460dp"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:layout_marginTop="6dp"
+            app:layout_constraintTop_toBottomOf="@id/nomepaitext"
+            app:layout_constraintStart_toEndOf="@id/emailpaitext"/>
+
+        <TextView
+            android:id="@+id/nomemaetext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nome da mãe:"
+            android:textSize="30sp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="@id/retangulobordas"
+            app:layout_constraintTop_toBottomOf="@id/emailpaitext"
+            android:layout_marginStart="10dp"
+            />
+
+        <EditText
+            android:id="@+id/nomemaeedit"
+            android:layout_width="450dp"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@id/emailpaitext"
+            app:layout_constraintStart_toEndOf="@id/nomemaetext"/>
+
+        <TextView
+            android:id="@+id/emailmaetext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email da mãe:"
+            android:textSize="30sp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="@id/retangulobordas"
+            app:layout_constraintTop_toBottomOf="@id/nomemaetext"
+            android:layout_marginStart="10dp"
+            />
+
+        <EditText
+            android:id="@+id/emailmaeedit"
+            android:layout_width="460dp"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:layout_marginTop="6dp"
+            app:layout_constraintTop_toBottomOf="@id/nomemaetext"
+            app:layout_constraintStart_toEndOf="@id/emailmaetext"/>
+
+       <TextView
+           android:id="@+id/estadociviltext"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Estado civil dos pais:"
+           android:textSize="30sp"
+           android:layout_marginTop="15dp"
+           android:layout_marginStart="10dp"
+           app:layout_constraintStart_toStartOf="@id/retangulobordas"
+           app:layout_constraintTop_toBottomOf="@id/emailmaetext"/>
+
+        <RadioButton
+            android:id="@+id/solteiros"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Solteiros"
+            android:textSize="27sp"
+            app:layout_constraintStart_toEndOf="@id/estadociviltext"
+            app:layout_constraintTop_toBottomOf="@id/emailmaetext"
+            android:layout_marginTop="14dp"
+            android:layout_marginStart="10dp" />
+
+        <RadioButton
+            android:id="@+id/casados"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Casados"
+            android:textSize="27sp"
+            app:layout_constraintStart_toEndOf="@id/solteiros"
+            app:layout_constraintTop_toBottomOf="@id/emailmaetext"
+            android:layout_marginTop="14dp"
+            android:layout_marginStart="10dp" />
+
+        <RadioButton
+            android:id="@+id/divorciados"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Divorciados"
+            android:textSize="27sp"
+            app:layout_constraintStart_toEndOf="@id/casados"
+            app:layout_constraintTop_toBottomOf="@id/emailmaetext"
+            android:layout_marginTop="14dp"
+            android:layout_marginStart="10dp" />
+
+        <TextView
+            android:id="@+id/moracomtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Em caso de pais separados, você mora com::"
+            android:textSize="30sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="10dp"
+            app:layout_constraintStart_toStartOf="@id/retangulobordas"
+            app:layout_constraintTop_toBottomOf="@id/estadociviltext"/>
+
+        <RadioButton
+            android:id="@+id/mae"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mãe"
+            android:textSize="27sp"
+            app:layout_constraintStart_toStartOf="@id/retangulobordas"
+            app:layout_constraintTop_toBottomOf="@id/moracomtext"
+            android:layout_marginStart="10dp" />
+
+        <RadioButton
+            android:id="@+id/pai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pai"
+            android:textSize="27sp"
+            app:layout_constraintStart_toEndOf="@id/mae"
+            app:layout_constraintTop_toBottomOf="@id/moracomtext"
+            android:layout_marginStart="20dp" />
+
+        <RadioButton
+            android:id="@+id/avos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Avós"
+            android:textSize="27sp"
+            app:layout_constraintStart_toEndOf="@id/pai"
+            app:layout_constraintTop_toBottomOf="@id/moracomtext"
+            android:layout_marginStart="20dp" />
+
+        <RadioButton
+            android:id="@+id/outros"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Outros"
+            android:textSize="27sp"
+            app:layout_constraintStart_toEndOf="@id/avos"
+            app:layout_constraintTop_toBottomOf="@id/moracomtext"
+            android:layout_marginStart="20dp" />
+
+        <TextView
+            android:id="@+id/fone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:text="Fone/Celular"
+            app:layout_constraintTop_toBottomOf="@id/mae"
+            app:layout_constraintStart_toStartOf="@id/retangulobordas"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"/>
+
+
+        <TextView
+            android:id="@+id/fonepaitext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pai:"
+            android:textSize="30sp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="@id/retangulobordas"
+            app:layout_constraintTop_toBottomOf="@id/fone"
+            android:layout_marginStart="10dp"
+            />
+
+        <EditText
+            android:id="@+id/fonepaiedit"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:layout_marginTop="6dp"
+            app:layout_constraintTop_toBottomOf="@id/fone"
+            app:layout_constraintStart_toEndOf="@id/fonepaitext"/>
+
+        <TextView
+            android:id="@+id/fonemaetext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mãe:"
+            android:textSize="30sp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="@id/retangulobordas"
+            app:layout_constraintTop_toBottomOf="@id/fonepaitext"
+            android:layout_marginStart="10dp"
+            />
+
+        <EditText
+            android:id="@+id/fonemaeedit"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@id/fonepaitext"
+            app:layout_constraintStart_toEndOf="@id/fonemaetext"/>
+
+        <TextView
+            android:id="@+id/foneavostext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Avós:"
+            android:textSize="30sp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="@id/retangulobordas"
+            app:layout_constraintTop_toBottomOf="@id/fonemaetext"
+            android:layout_marginStart="10dp"
+            />
+
+        <EditText
+            android:id="@+id/foneavosedit"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:layout_marginTop="6dp"
+            app:layout_constraintTop_toBottomOf="@id/fonemaetext"
+            app:layout_constraintStart_toEndOf="@id/foneavostext"/>
+
+        <TextView
+            android:id="@+id/foneoutrostext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Outros:"
+            android:textSize="30sp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="@id/retangulobordas"
+            app:layout_constraintTop_toBottomOf="@id/foneavostext"
+            android:layout_marginStart="10dp"
+            />
+
+        <EditText
+            android:id="@+id/foneoutrosedit"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@id/foneavostext"
+            app:layout_constraintStart_toEndOf="@id/foneoutrostext"/>
+
+        <TextView
+            android:id="@+id/dadosescolares"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="II. DADOS ESCOLARES"
+            android:textSize="27sp"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/foneoutrostext"
+            app:layout_constraintStart_toStartOf="@id/retangulobordas"
+            android:layout_marginStart="10dp" />
+
+        <TextView
+            android:id="@+id/escolaconcluidatext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:text="Escola que concluiu o ensino fundamental: "
+            app:layout_constraintStart_toStartOf="@id/retangulobordas"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintTop_toBottomOf="@id/dadosescolares"/>
+
+        <EditText
+            android:id="@+id/escolaconcluidaedit"
+            android:layout_width="700dp"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            app:layout_constraintTop_toBottomOf="@id/escolaconcluidatext"
+            app:layout_constraintStart_toStartOf="@id/retangulobordas"/>
+
+        <TextView
+            android:id="@+id/tipoescolatext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:text="Tipo de escola: "
+            app:layout_constraintStart_toStartOf="@id/retangulobordas"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintTop_toBottomOf="@id/escolaconcluidaedit"/>
+
+        <RadioButton
+            android:id="@+id/publica"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pública"
+            android:textSize="27sp"
+            app:layout_constraintStart_toEndOf="@id/tipoescolatext"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="13dp"
+            app:layout_constraintTop_toBottomOf="@id/escolaconcluidaedit"
+            />
+
+        <RadioButton
+            android:id="@+id/privada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Privada"
+            android:textSize="27sp"
+            app:layout_constraintStart_toEndOf="@id/publica"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="13dp"
+            app:layout_constraintTop_toBottomOf="@id/escolaconcluidaedit"
+            />
+
+
+        <TextView
+            android:id="@+id/anoconlusaotext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:text="Ano de conclusão: "
+            app:layout_constraintStart_toEndOf="@id/privada"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintTop_toBottomOf="@id/escolaconcluidaedit"/>
+
+        <EditText
+            android:id="@+id/anoconclusaoedit"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@id/escolaconcluidaedit"
+            app:layout_constraintStart_toEndOf="@id/anoconlusaotext"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
+
+    </ScrollView>
