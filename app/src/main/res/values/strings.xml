@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">Progest</string>
     <string name="criarconta">Não tem uma conta?<font color="#0000FF" textStyle="bold"> Cadastre-se</font></string>
+    <string-array name="opcoesrelatorios">
+        <item>Mais recentes primeiro</item>
+        <item>Mais antigos primeiro</item>
+        <item>Já concluídos</item>
+        <item>Últimos acessados</item>
+        <item>Última modificação</item>
+    </string-array>
 </resources>

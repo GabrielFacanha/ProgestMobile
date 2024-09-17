@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    android:background="@color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".TelaPrincipalActivity">
@@ -18,6 +19,46 @@
         android:layout_marginTop="100dp"
         android:id="@+id/divisor"
         />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Iniciar um novo documento"
+            android:fontFamily="@font/roboto_bold"
+            android:textSize="30dp"
+            android:id="@+id/iniciarDocumento"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toTopOf="@id/divisor"
+            app:layout_constraintStart_toEndOf="@id/trespontos"
+            />
+        
+        <ImageView
+            android:layout_width="190dp"
+            android:layout_height="240dp"
+            android:src="@drawable/mais__1_"
+            android:scaleType="centerInside"
+            android:layout_marginStart="100dp"
+            android:padding="5dp"
+            android:id="@+id/relatoriomais"
+            android:background="@drawable/relatorioborda"
+            app:layout_constraintStart_toStartOf="@id/iniciarDocumento"
+            app:layout_constraintTop_toBottomOf="@id/iniciarDocumento"
+            app:layout_constraintBottom_toTopOf="@id/divisor2"
+            />
+
+        <ImageView
+            android:layout_width="190dp"
+            android:layout_height="240dp"
+            android:src="@drawable/cap_relatorio1__1_"
+            android:layout_marginStart="30dp"
+            android:scaleType="fitXY"
+            android:id="@+id/relatoriominiatura"
+            android:padding="5dp"
+            android:background="@drawable/relatorioborda"
+            app:layout_constraintStart_toEndOf="@id/relatoriomais"
+            app:layout_constraintTop_toBottomOf="@id/iniciarDocumento"
+            app:layout_constraintBottom_toTopOf="@id/divisor2"
+            />
 
         <androidx.appcompat.widget.AppCompatImageButton
             android:layout_width="50dp"
@@ -37,21 +78,67 @@
             android:layout_height="wrap_content"
             android:text="PROGEST"
             android:textSize="40sp"
-            android:layout_marginStart="10dp"
+            android:id="@+id/Progestescrita"
+            android:fontFamily="@font/roboto_light"
+            android:textStyle="bold"
+            android:layout_marginStart="20dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toEndOf="@id/trespontos"
             app:layout_constraintBottom_toTopOf="@id/divisor"/>
 
         <androidx.appcompat.widget.SearchView
-            android:layout_width="300dp"
-            android:layout_height="50dp"
+            android:layout_width="550dp"
+            android:layout_height="60dp"
+            android:background="@drawable/barrapesquisa"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toTopOf="@id/divisor"/>
 
 
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            app:layout_constraintTop_toBottomOf="@id/divisor"
+            android:layout_marginTop="350dp"
+            android:id="@+id/divisor2"
+            />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Documentos recentes"
+            android:textSize="30sp"
+            android:fontFamily="@font/roboto_bold"
+            android:layout_marginTop="20dp"
+            android:id="@+id/documentosrecentes"
+            app:layout_constraintTop_toTopOf="@id/divisor2"
+            app:layout_constraintStart_toEndOf="@id/trespontos"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Filtrar por..."
+            android:textSize="30sp"
+            android:id="@+id/filtrarpor"
+            android:fontFamily="@font/roboto_light"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="@id/divisor2"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="300dp"
+            />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            app:layout_constraintTop_toTopOf="@id/filtrarpor"
+            app:layout_constraintStart_toEndOf="@id/filtrarpor"
+            app:layout_constraintBottom_toBottomOf="@id/filtrarpor"
+            android:layout_marginStart="10dp"
+            android:entries="@array/opcoesrelatorios"
+            />
 
 
 
