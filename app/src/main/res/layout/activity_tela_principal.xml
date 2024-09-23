@@ -61,17 +61,16 @@
             />
 
         <androidx.appcompat.widget.AppCompatImageButton
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:scaleType="fitXY"
-            android:background="@color/white"
-            android:src="@drawable/Menu"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/divisor"
-            android:layout_marginStart="30dp"
             android:id="@+id/trespontos"
-            />
+            android:layout_width="27dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="30dp"
+            android:background="@color/white"
+            android:scaleType="fitXY"
+            android:src="@drawable/menu"
+            app:layout_constraintBottom_toTopOf="@id/divisor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:layout_width="wrap_content"
